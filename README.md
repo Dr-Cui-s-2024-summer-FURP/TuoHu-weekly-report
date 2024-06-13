@@ -1,3 +1,3 @@
 # TuoHu-weekly-report
-FURP project
-Week1Report: <./week1>
+
+-[Week1Report](week1.md)
