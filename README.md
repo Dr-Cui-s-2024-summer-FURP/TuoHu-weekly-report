@@ -1,3 +1,3 @@
 # TuoHu-weekly-report
 
--[Week1Report](week1.md)
+-[Week1Report](week1)
