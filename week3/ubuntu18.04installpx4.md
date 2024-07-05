@@ -42,21 +42,21 @@ Update pip version with these two lines of code, then install the Python depende
 Tsinghua Source
 
 ```jsx
-sudo sh -c '. /etc/lsb-release && echo "deb <http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/> lsb_release -cs main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ lsb_release -cs main" > /etc/apt/sources.list.d/ros-latest.list'
 
 ```
 
 USTC Source
 
 ```jsx
-sudo sh -c '. /etc/lsb-release && echo "deb <http://mirrors.ustc.edu.cn/ros/ubuntu/> lsb_release -cs main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ lsb_release -cs main" > /etc/apt/sources.list.d/ros-latest.list'
 
 ```
 
 Official Source
 
 ```jsx
-sudo sh -c 'echo "deb <http://packages.ros.org/ros/ubuntu> $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 ```
 
@@ -64,7 +64,7 @@ sudo sh -c 'echo "deb <http://packages.ros.org/ros/ubuntu> $(lsb_release -sc) ma
 
 ```jsx
 sudo apt install curl
-curl -s <https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc> | sudo apt-key add -
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 ```
 
@@ -136,16 +136,16 @@ sudo apt-get remove ros-melodic-gazebo* # Modify for kinetic or noetic
 1. Set up the computer to accept software from [package.osrfoundation.org](http://package.osrfoundation.org/)
 
 ```jsx
-sudo sh -c 'echo "deb <http://packages.osrfoundation.org/gazebo/ubuntu-stable> lsb_release -cs main" > /etc/apt/sources.list.d/gazebo-stable.list'
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable lsb_release -cs main" > /etc/apt/sources.list.d/gazebo-stable.list'
 cat /etc/apt/sources.list.d/gazebo-stable.list
-#if "deb <http://packages.osrfoundation.org/gazebo/ubuntu-stable> xenial main" appears, there are no problems
+#if "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable xenial main" appears, there are no problems
 
 ```
 
 1. Set the key
 
 ```jsx
-wget <https://packages.osrfoundation.org/gazebo.key> -O - | sudo apt-key add -
+wget https://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt-get update
 
 ```
@@ -187,7 +187,7 @@ If it runs normally, there are no problems.
 
 ```jsx
 sudo apt install ros-melodic-mavros ros-melodic-mavros-extras 		# for ros-melodic
-wget <https://gitee.com/robin_shaun/XTDrone/raw/master/sitl_config/mavros/install_geographiclib_datasets.sh>
+wget https://gitee.com/robin_shaun/XTDrone/raw/master/sitl_config/mavros/install_geographiclib_datasets.sh
 sudo chmod a+x ./install_geographiclib_datasets.sh
 sudo ./install_geographiclib_datasets.sh
 
@@ -200,7 +200,7 @@ Please wait for the shell file to run. It will end after about three lines of pr
 1. It is recommended to use gitee for download
 
 ```jsx
-git clone <https://gitee.com/robin_shaun/PX4_Firmware>
+git clone https://gitee.com/robin_shaun/PX4_Firmware
 cd PX4_Firmware
 git checkout -b xtdrone/dev v1.11.0-beta1
 
@@ -209,7 +209,7 @@ git checkout -b xtdrone/dev v1.11.0-beta1
 Or use GitHub for download
 
 ```jsx
-git clone <https://github.com/PX4/PX4-Autopilot.git>
+git clone https://github.com/PX4/PX4-Autopilot.git
 mv PX4-Autopilot PX4_Firmware
 cd PX4_Firmware
 git checkout -b xtdrone/dev v1.11.0-beta1

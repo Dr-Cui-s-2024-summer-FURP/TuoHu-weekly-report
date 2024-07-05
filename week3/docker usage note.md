@@ -4,7 +4,7 @@ Since the ego-planner project is developed based on Ubuntu 18.04 and ROS, its ve
 
 The official Docker download site, [download.docker.com](http://download.docker.com/), is not accessible, and using a proxy often fails as well. So, I decided to use the Fishros download source to download the package.
 
-**`wget <http://fishros.com/install> -O fishros && . fishros`**
+**`wget http://fishros.com/install -O fishros && . fishros`**
 
 If the Fishros toolkit cannot be used to download properly, please go to the directories /etc/apt/sources.list.d/ or /etc/apt/sources.list/ and delete the existing Docker-related apt sources. The reason is that the Fishros toolkit detects that you currently have Docker-related apt sources and attempts to download from them. After deletion, the Fishros toolkit won't detect any sources and will add Chinese mirror sites to download from.
 
